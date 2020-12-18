@@ -1,0 +1,67 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# In[1]:
+
+
+from tkinter import *
+
+
+# In[21]:
+
+
+
+def login():#sunken groove
+    intro.destroy()
+    adminlogin=Tk()
+    adminlogin.geometry('550x600')
+    adminlogin.resizable(0,0)
+    adminlogin.title('librarian account')
+    adminlogin.configure(bg= 'orange')
+    Label(adminlogin,text='Librarian Name*:',bg = 'orange',relief='sunken' ,fg='brown',font=('leelawadee ui semilight',12,'bold')).place(x=100,y=100)  
+    lib_name=Entry(adminlogin,width=20,bg='white',fg='black')
+    lib_name.place(x=300,y=100)
+    Label(adminlogin,text='Shift*:',bg = 'orange' ,fg='brown',relief='sunken',font=('leelawadee ui semilight',12,'bold')).place(x=100,y=150)  
+    admin_shift=Entry(adminlogin,width=20,bg='white',fg='black')
+    admin_shift.place(x=300,y=150)
+    Label(adminlogin,text='UserID*:',bg = 'orange' ,fg='brown',relief='sunken',font=('leelawadee ui semilight',12,'bold')).place(x=100,y=200)  
+    admin_uid=Entry(adminlogin,width=20,bg='white',fg='black')
+    admin_uid.place(x=300,y=200)
+    Label(adminlogin,text='Mobile Number*:',bg = 'orange' ,relief='sunken',fg='brown',font=('leelawadee ui semilight',12,'bold')).place(x=100,y=250)    
+    admin_mobile=Entry(adminlogin,width=20,bg='white',fg='black')
+    admin_mobile.place(x=300,y=250)
+    Label(adminlogin,text='Join Date*:',bg = 'orange' ,fg='brown',relief='sunken',font=('leelawadee ui semilight',12,'bold')).place(x=100,y=300)  
+    admin_join_date=Entry(adminlogin,width=20,bg='white',fg='black')
+    admin_join_date.place(x=300,y=300)
+    Label(adminlogin,text='Last date:',bg = 'orange' ,fg='brown',relief='sunken',font=('leelawadee ui semilight',12,'bold')).place(x=100,y=350)  
+    admin_last_date=Entry(adminlogin,width=20,bg='white',fg='black')
+    admin_last_date.place(x=300,y=350)
+    Button(adminlogin,text='Sign Up',bg = 'brown' ,fg='lightcyan',relief='raised',command=intro,font=('leelawadee ui semilight',16,'bold italic')).place(x=300,y=450)
+    Button(adminlogin,text='Reset',bg = 'orange' ,fg='brown',relief='groove',command=intro,font=('leelawadee ui semilight',16,'bold italic')).place(x=100,y=450)
+    adminlogin.mainloop()
+
+intro=Tk()
+intro.geometry('600x500')
+intro.title('librarian account')
+intro.resizable(0,0)
+intro.configure(bg= 'black')
+
+Label(intro,text='Librarian Account',bg = 'black' ,fg='green',relief='sunken',font=('leelawadee ui semilight',30,'bold')).place(x=150,y=14)   
+Label(intro,text='UserID* ',bg = 'black' ,fg='white',font=('leelawadee ui semilight',16,'bold')).place(x=150,y=150)
+librarian_userid=Entry(intro,width=16,bg='white',fg='black')
+librarian_userid.place(x=290,y=160)
+Label(intro,text='Password* ',bg = 'black', fg='white',font=('leelawadee ui semilight',16,'bold')).place(x=150,y=230)    
+librarian_password=Entry(intro,width=16,bg='white',fg='black')
+librarian_password.place(x=290,y=240)
+Button(intro,text='Forgot Password',bg = 'black' ,relief='raised',fg='blue',font=('arial',8,'bold italic')).place(x=150,y=300)   
+Button(intro,text='Log in',bg = 'green' ,fg='white',relief='raised',font=('leelawadee ui semilight',16,'bold italic')).place(x=300,y=300) 
+Label(intro,text='or ',bg = 'black', fg='white',font=('leelawadee ui semilight',5,'bold')).place(x=300,y=370)
+Button(intro,text='Sign Up',command=login,bg = 'orange' ,fg='brown',relief='raised',font=('arial',10,'bold italic')).place(x=300,y=400)
+intro.mainloop()
+
+
+# In[ ]:
+
+
+
+
